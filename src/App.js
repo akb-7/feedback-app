@@ -1,31 +1,13 @@
-function App() {
-  const title = 'Blog Post'
-  const body = 'This is my blog post'
-  const comments = [
-	  {id:1,text:"comment 1"},
-	  {id:2,text:"comment 2"},
-	  {id:3,text:"comment 3"},
-	  {id:4,text:"comment 4"}
-  ]
-  const loading = false;
-  const showComments = true;
+import Header from "./components/Header";
 
-  if(loading) return <h1>Loading....</h1>
+function App() {
   return (
+    <>
+    <Header text='Hello World'/>
     <div className="App">
-        <h1>{title}</h1>
-        <p>{body}</p>
-        {showComments &&
-        <div className="comments">
-        <h3>Comments ({comments.length})</h3>
-        <ul>
-          {comments.map((comment,index)=>(
-            <li key={index}>{comment.text}</li>
-          ))}
-        </ul>
-      </div>}
-        
+      <h1>My App</h1>
     </div>
+    </>
   );
 }
 
